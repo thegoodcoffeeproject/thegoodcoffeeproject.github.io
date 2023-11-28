@@ -7445,7 +7445,7 @@ h1, h2, h3, h4, h5,
     left: 0;
     top: 0;
     margin-top: -130px;
-    background: #151111 !important;
+    background: #c49b6300 !important;
     -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     border: none; }
@@ -7775,7 +7775,7 @@ h1, h2, h3, h4, h5,
     padding: 30px; }
     @media (min-width: 1200px) {
       .ftco-intro .wrap .info {
-        width: calc(100%);
+        width: calc(100%  );
         padding: 2% 5% 2% 12%; } }
     @media (max-width: 767.98px) {
       .ftco-intro .wrap .info {
