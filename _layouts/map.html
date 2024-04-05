@@ -31,7 +31,7 @@ const LeafIcon = L.Icon.extend({
 	const redIcon = new LeafIcon({iconUrl: '/images/123a.png'});
 	const orangeIcon = new LeafIcon({iconUrl: '/images/123a.png'});
 
-	const mGreen = L.marker([51.5, -0.09], {icon: greenIcon}).bindPopup('I am a green leaf.').addTo(map);
+	const mGreen = L.marker([14.2350, -51.9253], {icon: greenIcon}).bindPopup(`I am a green leaf.<a href="url">link text</a>`).addTo(map);
 	const mRed = L.marker([51.495, -0.083], {icon: redIcon}).bindPopup('I am a red leaf.').addTo(map);
 	const mOrange = L.marker([51.49, -0.1], {icon: orangeIcon}).bindPopup('I am an orange leaf.').addTo(map);
 
