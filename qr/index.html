@@ -7,7 +7,7 @@
 <script type="text/javascript" src="jquery.min.js"></script>
 <script type="text/javascript" src="qrcode.js"></script>
 </head>
-<body>
+<body style="background-color: black;">
 <input id="text" type="text" value="http://jindo.dev.naver.com/collie" style="width:80%;display: none;" /><br />
 <div id="qrcode" style="width:100px; height:100px; margin: auto; text-align: center;"></div>
 
@@ -17,8 +17,8 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 var elText1 = urlParams.get('text1');
 var qrcode = new QRCode(document.getElementById("qrcode"), {
-	width : 200,
-	height : 200
+	width : 250,
+	height : 250
 });
 
 function makeCode () {		
