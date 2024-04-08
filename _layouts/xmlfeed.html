@@ -8,7 +8,7 @@ layout: null
     <link>{{ site.url }}</link>
     <description>Your site description</description>
     <language>en-us</language>
-    {% for post in site.posts %}
+    {% for page in site.pages %}
     <item>
       <title>{{ post.title | xml_escape }}</title>
       <link>{{ site.url }}{{ post.url }}</link>
