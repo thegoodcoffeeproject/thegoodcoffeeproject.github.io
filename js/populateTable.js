@@ -10,10 +10,10 @@ document.addEventListener('DOMContentLoaded', function() {
             <td>${markers[i].job}</td>
             <td>${markers[i].name}</td>
             <td>${markers.time}</td>
-            <td>${markers.date}</td>
-            <td><img src="${markers.image}" alt="Image" style="width: 50px; height: auto;"></td>
-            <td>${markers.longitude}</td>
-            <td>${markers.latitude}</td>
+            <td>${markers[i].date}</td>
+            <td><img src="${markers[i].image}" alt="Image" style="width: 50px; height: auto;"></td>
+            <td>${markers[i].lng}</td>
+            <td>${markers[i].lat}</td>
         `;
 
         row.innerHTML = html;

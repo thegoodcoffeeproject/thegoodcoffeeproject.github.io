@@ -5,6 +5,7 @@ var markers = [
     image: '/images/123a.png',
     lat: 56.130366,
     lng: -106.346771,
+    no: 1
   },
   {
     name: 'Anguilla',
@@ -12,6 +13,7 @@ var markers = [
     image: '/images/123a.png',
     lat: 18.220554,
     lng: -63.068615,
+    no: 2
   },
   {
     name: 'Barbados',
@@ -19,6 +21,7 @@ var markers = [
     image: '/images/123a.png',
     lat: 13.193887,
     lng: -59.543198,
+    no: 3,
   },
   {
     name: 'United States',
@@ -26,6 +29,7 @@ var markers = [
     image: '/images/123a.png',
     lat: 37.09024,
     lng: -95.712891,
+    no: 4,
   },
   {
     name: 'Ireland',
@@ -33,6 +37,7 @@ var markers = [
     image: '/images/123a.png',
     lat: 53.41291,
     lng: -8.24389,
+    no: 5,
   },
   {
     name: 'Scotland',
@@ -40,6 +45,7 @@ var markers = [
     image: '/images/123a.png',
     lat: 56.490671,
     lng: -4.202646,
+    no: 6,
   },
   {
     name: 'England',
@@ -47,6 +53,7 @@ var markers = [
     image: '/images/123a.png',
     lat: 52.355518,
     lng: -1.17432,
+    no: 7,
   },
   {
     name: 'France',
@@ -54,6 +61,7 @@ var markers = [
     image: '/images/123a.png',
     lat: 46.227638,
     lng: 2.213749,
+    no: 8,
   },
   {
     name: 'The Netherlands',
@@ -61,6 +69,7 @@ var markers = [
     image: '/images/123a.png',
     lat: 52.132633,
     lng: 5.291266,
+    no: 9,
   },
   {
     name: 'Switzerland',
@@ -68,6 +77,7 @@ var markers = [
     image: '/images/123a.png',
     lat: 46.818188,
     lng: 8.227512,
+    no: 10,
   },
   {
     name: 'South Africa',
@@ -75,6 +85,7 @@ var markers = [
     image: '/images/123a.png',
     lat: -30.559482,
     lng: 22.937506,
+    no: 11,
   },
   {
     name: 'Madagascar',
@@ -82,23 +93,27 @@ var markers = [
     image: '/images/123a.png',
     lat: -18.766947,
     lng: 46.869107,
+    no: 12,
   },
   {
     name: 'Taiwan',
     url: 'https://en.wikipedia.org/wiki/Taiwan',
     lat: 23.69781,
     lng: 120.960515,
+    no: 13,
   },
   {
     name: 'Japan',
     url: 'https://en.wikipedia.org/wiki/Japan',
     lat: 36.204824,
     lng: 138.252924,
+    no: 14,
   },
   {
     name: 'Argentina',
     url: 'https://en.wikipedia.org/wiki/Argentina',
     lat: -38.416096,
     lng: -63.616673,
+    no: 15,
   },
 ]
