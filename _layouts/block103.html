@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Solana Transaction Details</title>
+   <!-- Example: Including a specific version of the Solana Web3.js library -->
+  
+   <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"></script>
+</head>
+<body>
+    <div id="transactionDetails"></div>
+    <script>
+       //  const solanaWeb3 = require('@solana/web3.js');
+
+        // Assuming solanaWeb3 is the correct reference after including the Solana Web3.js library
+        const programId = new solanaWeb3.PublicKey('fbtNRKYVE6xnEoCdmJ75QKnuvcxZNZ2J3HZ12F9wLZD');
+        const connection = new solanaWeb3.Connection(solanaWeb3.clusterApiUrl('devnet')); // Choose 'mainnet-beta' or 'testnet' as needed
+async function fetchProgramAccounts() {
+    const programAccounts = await connection.getProgramAccounts(programId);
+    return programAccounts;
+}
+//const borsh = require('borsh'); // Assuming you're using Borsh for serialization
+
+class AccountData {
+    // Define your account data structure here
+}
+
+function deserializeAccountData(rawData) {
+    // Adjust the schema and deserialization process according to your data structure
+    const schema = new Map([[AccountData, {kind: 'struct', fields: [['dataField', 'string']]}]]);
+   // const deserializedData = borsh.deserialize(schema, AccountData, rawData);
+    //return deserializedData;
+    // Serialization
+const serializedData = JSON.stringify(rawData);
+
+// Deserialization
+const deserializedData = JSON.parse(serializedData);
+console.log(deserializedData)
+}
+
+async function displayAllProgramData() {
+    const accounts = await fetchProgramAccounts();
+    accounts.forEach(account => {
+        const deserializedData = deserializeAccountData(account.account.data);
+        console.log(deserializedData);
+        // Here you can further process or display your data as needed
+    });
+}
+
+displayAllProgramData();
+
+</script>
+     
+ 
+</body>
+</html>

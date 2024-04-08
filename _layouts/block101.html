@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Solana Transaction Details</title>
+    <script src="https://cdn.jsdelivr.net/npm/@solana/web3.js"></script>
+</head>
+<body>
+    <div id="transactionDetails"></div>
+    <script>
+        const connection = new solanaWeb3.Connection(solanaWeb3.clusterApiUrl('mainnet-beta'));
+
+        async function getTransactionDetails(signature) {
+            try {
+                const transaction = await connection.getTransaction(signature);
+                return transaction;
+            } catch (error) {
+                console.error('Failed to fetch transaction:', error);
+            }
+        }
+
+        async function displayTransaction(signature) {
+            const transaction = await getTransactionDetails(signature);
+            if (transaction) {
+                const container = document.getElementById('transactionDetails');
+                container.innerHTML = `<pre>${JSON.stringify(transaction, null, 2)}</pre>`;
+            }
+        }
+
+        // Example usage
+        const transactionSignature = 'YourTransactionSignatureHere';
+        displayTransaction(transactionSignature);
+    </script>
+</body>
+</html>

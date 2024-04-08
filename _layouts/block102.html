@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Solana Transaction Details</title>
+   <!-- Example: Including a specific version of the Solana Web3.js library -->
+  
+   <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"></script>
+</head>
+<body>
+    <div id="transactionDetails"></div>
+    <script>
+       //  const solanaWeb3 = require('@solana/web3.js');
+
+        // Assuming solanaWeb3 is the correct reference after including the Solana Web3.js library
+        const programId = new solanaWeb3.PublicKey('fbtNRKYVE6xnEoCdmJ75QKnuvcxZNZ2J3HZ12F9wLZD');
+        const connection = new solanaWeb3.Connection(solanaWeb3.clusterApiUrl("devnet"), "confirmed");
+      
+        async function getRecentTransactionSignatures(programId) {
+          try {
+              const signatures = await connection.getSignaturesForAddress(programId);
+              return signatures;
+          } catch (error) {
+              console.error('Failed to fetch transaction signatures:', error);
+          }
+        }
+      
+        async function displayTransactionsForProgram(programId) {
+          const signatures = await getRecentTransactionSignatures(programId);
+          if (signatures) {
+              const limitedSignatures = signatures.slice(0, 5);
+              
+              for (const signatureInfo of limitedSignatures) {
+                  const transaction = await connection.getTransaction(signatureInfo.signature);
+                  console.log(transaction);
+                  const container = document.getElementById('transactionsContainer');
+                  const transactionElement = document.createElement('pre');
+                  transactionElement.textContent = JSON.stringify(transaction, null, 2);
+                  container.appendChild(transactionElement);
+              }
+          }
+        }
+      </script>
+     
+ 
+</body>
+</html>
